@@ -27,7 +27,16 @@ app.use('/url',urlRoute);
 app.use('/',newurl);
 app.use('/',clickurl);
 //
-
+ app.get('/',(req,res)=>{
+    return res.end(`<html>
+    <body>
+        <ol>
+            hey
+            hello
+        </ol>
+    </body>
+</html>`);
+ })
 
 app.listen(PORT,()=>console.log("server connted"));
 
